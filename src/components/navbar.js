@@ -2,6 +2,14 @@ import React from 'react'
 import Logo from '../assets/logo.png';
 
 function navbar() {
+
+
+  const scrollToTarget=(id)=>{
+    const targetDiv = document.getElementById(id);
+      if (targetDiv) {
+        targetDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+  }
   return (
     <nav class="navbar navbar-expand-lg pb-2">
       <div class="container" data-aos="zoom-in">
@@ -12,22 +20,22 @@ function navbar() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link " href="#">Home</a>
+              <a class="nav-link " onClick={()=>scrollToTarget("Home")}>Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" onClick={()=>scrollToTarget("Services")}>Services</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link " href="#" >
-               Blog
+              <a class="nav-link " onClick={()=>scrollToTarget("Products")}>
+               Products
               </a>
              
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
+              <a class="nav-link" onClick={()=>scrollToTarget("About")}>About us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" onClick={()=>scrollToTarget("Contact")}>Contact</a>
             </li>
           </ul>
           <form class="d-flex">

@@ -16,7 +16,7 @@ const product = () => {
     ]
 
   return (
-    <section class="product ">
+    <section class="product " id="Products">
     <div class="container ">
       <div class="row py-5 text-center">
         <div class="col-lg-6 m-auto">

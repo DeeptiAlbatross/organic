@@ -19,7 +19,7 @@ function App() {
 
   return <>
   <NavBar/>
-  <section class="main py-5">
+  <section class="main py-5" id="Home">
       <div class="container py-5" data-aos="zoom-in">
         <div class="row py-5">
           <div class="col-lg-6 py-5">
