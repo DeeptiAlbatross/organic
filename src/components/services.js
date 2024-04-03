@@ -14,7 +14,7 @@ const services = () => {
         <div class="row">
           <div class="col-lg-6 m-auto">
             <p class="m-0">Green agriculture</p>
-            <h1>Our Best Products</h1>
+            <h1>Our Services</h1>
             <div class="line  my-4"></div>
             <p> We call it ultimate because we simply believe every website we call it 
              ultimate because  we simply believes that every website needs to be well presented at the </p>
@@ -22,7 +22,7 @@ const services = () => {
         </div>
         <div class="d-flex justify-content-center">
             {Items?.map((i,index)=><div class="col-lg-3 mt-2  px-2">
-            <div class="card py-3"data-aos="fade-down"
+            <div class="card py-3" data-aos="fade-down"
              data-aos-easing="linear"
              data-aos-duration="1500">
               <div class="card-body">

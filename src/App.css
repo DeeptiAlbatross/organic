@@ -275,17 +275,18 @@ p{
 .seller i{
   color: orange;
 }
-.seller .card{
+/* .seller .card{
   /* border-radius: 10px; */
   /* border: none; */
+   
   
-  
-}
+/* } */
 .contact{
-  background:url(./assets/cont.jpg)no-repeat;
+  /* background:url(./assets/cont.jpg)no-repeat; */
   background-size: cover;
   width: 100%;
   height: 100vh;
+  background-color: rgb(193,124,221);
 }
 .contact h1{
   font-size: 3rem;
@@ -318,4 +319,8 @@ p{
   margin-top: 10px;
   padding: 10px;
 
+}
+.contact h2{
+  font-size: 3rem;
+ font-weight: bold ; 
 }
