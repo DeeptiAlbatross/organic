@@ -9,15 +9,61 @@ import Discount from "./components/discount";
 import NavBar from "./components/navbar";
 import Services from "./components/services";
 import Features from "./components/features";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 
+ const paraStyle={
+    WebkitLineClamp:3,
+    WebkitBoxOrient:'vertical',
+    overflow:"hidden",
+    display:'-webkit-box',
+  
+ }
 
 function App() {
+  const router=createBrowserRouter([
+    {
+       path:"/",
+       element: <></>
+    },
+    {
+      path:"/about",
+      element: <About/>
+    },
+    {
+      path:"/contact",
+      element: <Contact/>
+    },
+    {
+      path:"/discount",
+      element: <Discount/>
+    },
+     {
+      path:"/features",
+      element: <Features/>
+    }
+    , {
+      path:"/newarrival",
+      element: <NewArrival/>
+    },
+    {
+      path:"/products",
+      element: <Product/>
+    },
+    {
+      path:"/services",
+      element: <Services/>
+    }
+  ])
+    
+  const [isOpen,setIsOpen]=useState(false);
+
   useEffect(()=>{
   AOS.init({duration:1000})
   },[]);
 
   return <>
+  <RouterProvider router={router}/>
   <NavBar/>
   <section class="main py-5" id="Home">
       <div class="container py-5" data-aos="zoom-in">
@@ -26,15 +72,21 @@ function App() {
             <p class="m-0">Organic products</p>
             <h1 >Fresh Organic</h1>
             <div class="line my-4"></div>
-            <p>Organic food id food and drinks produced by methods complying with the standards of the organic farming.
+            <p style={ isOpen ? null:paraStyle}
+              >Organic food id food and drinks produced by methods complying with the standards of the organic farming.
               Standards vary worldwide,but organic farming features practices that cycle resources.
+              sdfxghjklrdftgyhuijkkodjfecnhrinuyehroiwejrlkmqwcrjerwuvgteruythgwoeiurhmowperxjewkjthe
+              xercweg rcywecgriojehrtoiuerhuyer gvtuhnxqwjhenxewijrhfcgeriuybtbgerwuythgnexqplkxjd
+              exhrgweh r fgrejgf rshgweruneqjrhewj
+              whewg hwegrcwerh ewpijrfh
             </p>
-            <button class="mbtn1 mt-4 " >Read More</button>
+            <button onClick={() => setIsOpen(!isOpen)} class="mbtn1 mt-4 ">{isOpen ?'Read less..':'Read more....'}</button>
             <button class="mbtn2">Shop now</button>
           </div>
         </div>
       </div>
     </section>
+    
     <About/>
     <Features/>
     <Product/>

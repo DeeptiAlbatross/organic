@@ -4,6 +4,8 @@ import Logo from '../assets/logo.png';
 function navbar() {
 
 
+
+
   const scrollToTarget=(id)=>{
     const targetDiv = document.getElementById(id);
       if (targetDiv) {
