@@ -8,9 +8,9 @@ const discount = () => {
         <div class="col-lg-10 m-auto text-center">
           <h1><span class="head1"><i class="bi bi-cash-coin"></i>Discount coupon for -20% :</span>PWEB01424 </h1>
         </div>
-        <div class="col-lg-2 m-auto">
-          <button class="dbtn">More offer</button>
-        </div>
+        {/* <div class="col-lg-2 m-auto">
+          <button   class="dbtn">More offer</button>
+        </div> */}
       </div>
     </div>
   </section>

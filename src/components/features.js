@@ -19,7 +19,9 @@ const features = () => {
               <div class="card-bady" data-aos="fade-left">
                 <span><i class="bi bi-shop-window"></i></span>
                 <h2>Always fresh</h2>
-                <p>lorem ipsum sdfghjk</p>
+                <p>
+               At Always Fresh Organic, we are dedicated to providing you with the freshest and most nutritious organic food available. 
+               </p>
               </div>
             </div>
           </div>
@@ -28,7 +30,7 @@ const features = () => {
               <div class="card-bady" data-aos="fade-up">
                 <span><i class="bi bi-egg-fried"></i></span>
                 <h2>Healthy Food </h2>
-                <p>lorem ipsum sdfghjk</p>
+                <p>At NutriGreen Organics, we believe that food should not only taste great but also nourish your body and support your overall health.</p>
               </div>
             </div>
           </div>
@@ -37,7 +39,7 @@ const features = () => {
               <div class="card-bady " data-aos="fade-right">
                 <span><i class="bi bi-gift"></i></span>
                 <h2>100% Organic</h2>
-                <p>lorem ipsum sdfghjk</p>
+                <p>Experience the purity of 100% organic products with PureOrganic Heaven. Join us in nourishing your body one organic choice at a time.</p>
               </div>
             </div>
           </div>

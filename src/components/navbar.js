@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from '../assets/logo.png';
 
-function navbar() {
+function Navbar ({size}){
 
 
 
@@ -43,7 +43,7 @@ function navbar() {
           <form class="d-flex">
             <input class="px-2 search" type="search" placeholder="Search" aria-label="Search"/>
             <button class="btn1 me-2 px-3" type="submit">Search</button>
-            <span><i class="bi bi-bag-plus"></i></span>
+            <span>{size}<i class="bi bi-bag-plus" ></i></span>
           </form>
         </div>
       </div>
@@ -54,4 +54,4 @@ function navbar() {
   )
 }
 
-export default navbar
+export default Navbar;
