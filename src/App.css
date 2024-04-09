@@ -121,6 +121,7 @@ p{
   height: 90vh;
   width: 100%;
 }
+
 .about h1{
   font-size: 3rem;
  font-weight: bold ; 
@@ -323,4 +324,71 @@ p{
 .contact h2{
   font-size: 3rem;
  font-weight: bold ; 
+}
+.headingAbout{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto;
+
+}
+.about-content{
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px auto;
+
+}
+.headingAbout h1{
+  font-size: 50px;
+  color: #000;
+  margin-bottom: 25px;
+  position: relative;
+}
+.headingAbout h1::after{
+  content: "";
+  position: relative ;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0 auto;
+  background-color: #4caf50;
+}
+.headingAbout p{
+  font-size: 18px;
+  color:#666;
+  margin-bottom: 5px;
+  padding-top: 20px;
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+.about1{
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+.about-image{
+  background:url(./assets/1000_F_105591762_l813NmzNhNJjvMrQwiWyt7h2TsOV4ceg.jpg)no-repeat;
+  flex: 4;
+  margin-right: 100px;
+  overflow: hidden;
+  margin-left: 0px;
+  height: 100vh;
+}
+.about-image img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
 }
