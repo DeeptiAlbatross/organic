@@ -1,3 +1,7 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme-min.css');
+
+
 *{
   padding:0;
   margin: 0;
@@ -183,6 +187,10 @@ p{
 }
 .star{
   text-align: end;
+  color: orange;
+}
+.starDetails{
+  text-align: start;
   color: orange;
 }
 .product .card{
@@ -391,4 +399,72 @@ flex-wrap: wrap;
   height: auto;
   display: block;
   transition: 0.5s ease;
+}
+.details{
+  width: 100%;
+  height: auto;
+  padding: 30px 0px;
+  border-bottom: 2px solid rgb(102, 165, 8);
+
+}
+ul.nav{
+  list-style: none;
+  padding: 10px 16px;
+  background-color: white;
+
+}
+ul.nav li+li:before{
+ padding: 8px;
+ color: black;
+ content: "/\00a0";
+
+}
+ul.nav li a{
+  color:green;
+  text-decoration: none;
+  
+}
+ul.nav li a:hover{
+color: green;
+text-decoration: underline;
+}
+.reviews{
+  text-decoration: none;
+  color: black;
+  padding-left: 20px;
+}
+.text-g{
+  color: #064008;
+  font-weight: bold;
+  font-size: 40px;
+}
+.colour{
+  color: #424242;
+}
+.detailsPage .productInfo h1 {
+font-size: 40px;
+font-weight: bold;
+opacity: 0.8;
+
+}
+.detailsPage .productInfo .priceSection .priceLarge{
+  font-size: 45px;
+  font-weight: bold;
+}
+.detailsPage .productInfo .priceSection .text-org {
+  font-size: 16px;
+  font-weight: 600;
+} 
+.productZoom{
+  border:  1px solid #000;
+  overflow: hidden;
+  border-radius: 10px ;
+}
+.zoomSlider .slick-slide {
+  padding-right: 20px;
+  padding: 10px;
+
+}
+.zoomSlider{
+  padding-top: 30px;
 }

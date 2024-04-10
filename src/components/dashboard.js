@@ -10,6 +10,7 @@ import Services from "./services";
 import Features from "./features";
 import { useEffect, useState } from "react";
 import Navbar from "./navbar";
+import ItemDetails from './itemDetail';
 
  const paraStyle={
     WebkitLineClamp:3,
@@ -54,6 +55,7 @@ function App() {
      <About/>
     <Features/>
     <Product/>
+    <ItemDetails/>
     <Discount/>
     <Services/>
     <NewArrival/>
