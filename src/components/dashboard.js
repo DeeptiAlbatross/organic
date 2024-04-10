@@ -30,7 +30,7 @@ function App() {
 
   return <>
  
-  <Navbar size={Navbar.length}/>
+  <Navbar/>
   <section class="main py-5" id="Home">
       <div class="container py-5" data-aos="zoom-in">
         <div class="row py-5">

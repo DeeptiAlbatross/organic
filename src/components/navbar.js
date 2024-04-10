@@ -1,17 +1,22 @@
 import React, { useState } from 'react'
 import Logo from '../assets/logo.png';
-
-function Navbar ({size}){
-
-
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 
+function Navbar (){
+  const navigate=useNavigate();
+
+  const cart = useSelector((state) => state.cart);
+  console.log(cart);
   const scrollToTarget=(id)=>{
     const targetDiv = document.getElementById(id);
       if (targetDiv) {
         targetDiv.scrollIntoView({ behavior: "smooth", block: "start" });
       }
   }
+
+  
   return (
     <nav class="navbar navbar-expand-lg pb-2">
       <div class="container" data-aos="zoom-in">
@@ -43,7 +48,7 @@ function Navbar ({size}){
           <form class="d-flex">
             <input class="px-2 search" type="search" placeholder="Search" aria-label="Search"/>
             <button class="btn1 me-2 px-3" type="submit">Search</button>
-            <span>{size}<i class="bi bi-bag-plus" ></i></span>
+            <span><i onClick={() =>navigate('/add-to-cart')} class="bi bi-bag-plus" >{cart.cartItems}</i></span>
           </form>
         </div>
       </div>
