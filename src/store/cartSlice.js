@@ -26,9 +26,7 @@ export const cartSlice = createSlice({
       };
     
     },
-    // showCart: (state) => {
-    //   state.hidden = !state.hidden;
-    // },
+    
   },
 });
 export const {addToCart, removeAll, removeItem } = cartSlice.actions;

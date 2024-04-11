@@ -1,72 +1,34 @@
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect} from "react";
 import { useDispatch } from "react-redux";
-import {addToCart} from '../store/cartSlice';
+import { addToCart } from "../store/cartSlice";
+import { addProductItems } from "../store/productSlice";
+import { useSelector } from "react-redux";
+
 
 const Product = () => {
   const dispatch = useDispatch();
+  const { productItems} = useSelector((state) => state.product);
 
-  const Items = [
-    {
-      name: "Fresh lemon",
-      src: require("../assets/lemon.jpg"),
-      Quantity: "2*454g / 16oz",
-      price: "Rs.80",
-    },
-    {
-      name: "Garlic",
-      src: require("../assets/garlic.jpg"),
-      Quantity: "2*454g / 16oz",
-      price: "50",
-    },
-    {
-      name: "Manngo",
-      src: require("../assets/manngo.jpg"),
-      Quantity: "2*454g / 16oz",
-      price: "70",
-    },
-    {
-      name: "Mint",
-      src: require("../assets/mint.jpg"),
-      Quantity: "2*454g / 16oz",
-      price: "34",
-    },
-    {
-      name: "Orange",
-      src: require("../assets/orange.jpg"),
-      Quantity: "2*454g / 16oz",
-      price: "46",
-    },
-    {
-      name: "Pom",
-      src: require("../assets/Pom.jpg"),
-      Quantity: "2*454g / 16oz",
-      price: "567",
-    },
-    {
-      name: "Strawberry",
-      src: require("../assets/strawnb.jpg"),
-      Quantity: "2*454g / 16oz",
-      price: "78",
-    },
-    {
-      name: "Chilli",
-      src: require("../assets/chilli.jpg"),
-      Quantity: "2*454g / 16oz",
-      price: "78",
-    },
-    {
-      name: "Raw-Onions",
-      src: require("../assets/raw.jpg"),
-      Quantity: "2*454g / 16oz",
-      price: "78",
-    },
-  ];
   const navigate = useNavigate();
+  const handleNavigation = (id) => {
+    navigate(`/item-details/${id}`);
+  };
+
+  const callApi = async () => {
+    let apiData = await fetch("https://dummyjson.com/products");
+    const json = await apiData.json();
+    dispatch(addProductItems(json.products));
+  };
+
+  useEffect(() => {
+    callApi();
+  }, []);
+
 
   return (
     <section class="product " id="Products">
-      <div class="container ">
+      <div class="container">
         <div class="row py-5 text-center">
           <div class="col-lg-6 m-auto">
             <p class="m-0">Green agriculture</p>
@@ -81,11 +43,11 @@ const Product = () => {
           </div>
         </div>
         <div class="row">
-          {Items?.map((i, index) => (
-            <div class="col-lg-4">
+          {productItems?.map((i, index) => (
+            <div key={i?.id} class="col-lg-4">
               <div class="card rounded px-0 mt-4" data-aos="zoom-in-up">
                 <div class="card-body py-0">
-                  <div class="star">
+                  <div class="star  ">
                     <span>
                       <i class="bi bi-star-fill"></i>
                     </span>
@@ -100,20 +62,16 @@ const Product = () => {
                     </span>
                   </div>
                   <img
-                    src={i.src}
+                    src={i?.thumbnail}
                     class="img-fluid pb-3"
                     alt=""
-                    onClick={() => navigate("/item-details", { state: { i } })}
+                    onClick={() => handleNavigation(i.id)}
                   ></img>
-                  <h4 class="head1">{i.name} </h4>
-                  <p class="per1">2{i.Quantity}</p>
-                  <h4 class="head1">{i.price}</h4>
+                  <h4 class="head1">{i?.title} </h4>
+                  <h4 class="head1">{i?.price}</h4>
+                  <p class="per1">{i?.description}</p>
                   <button
-                    onClick={() =>
-                      dispatch(
-                        addToCart({i})
-                      )
-                    }
+                    onClick={() => dispatch(addToCart({ i }))}
                     class="btnc my-4"
                   >
                     Add to cart
