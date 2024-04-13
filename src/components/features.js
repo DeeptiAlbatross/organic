@@ -41,6 +41,9 @@ const features = () => {
                 <h2>100% Organic</h2>
                 <p>Experience the purity of 100% organic products with PureOrganic Heaven. Join us in nourishing your body one organic choice at a time.</p>
               </div>
+              <div>
+                sdfcghvbnjm,.
+              </div>
             </div>
           </div>
         </div>
