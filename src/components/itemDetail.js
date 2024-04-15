@@ -57,7 +57,7 @@ useEffect(() => {
                     <span>
                       <i class="bi bi-star-fill"></i>
                     </span>
-                    <span className="reviews text-dark"> (32 Reviews)</span>
+                    <span className="reviews text-dark"> (32 Review)</span>
                     </div>
                     <div className="priceSection d-flex align-items-centre mb-3">
 
